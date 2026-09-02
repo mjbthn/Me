@@ -1,0 +1,156 @@
+/* --- General Layout --- */
+body {
+  font-family: "Poppins", "Trebuchet MS", Verdana, sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, rgba(0, 96, 133, 0.8), rgba(203, 94, 110, 0.8));
+  color: rgba(40, 40, 40, 0.9);
+}
+
+/* --- Header --- */
+header {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  padding: 25px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  flex-wrap: wrap;
+}
+
+/* --- Header Text --- */
+header h1 {
+  color: rgba(25, 25, 112, 0.9);
+  margin: 0;
+}
+
+
+/* --- Navigation --- */
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+}
+
+header li {
+  display: inline-block;
+}
+
+header a {
+  position: relative;
+  text-decoration: none;
+  color: #0059b3;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+header a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #0059b3;
+  transition: width 0.3s ease;
+}
+
+header a:hover {
+  color: #003d80;
+}
+
+header a:hover::after {
+  width: 100%;
+}
+
+/* --- Main Content --- */
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+#topBtn:hover {
+  background-color: rgba(72, 61, 139, 0.9);
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.6);
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+/* --- Intro Text --- */
+.intro-text {
+  max-width: 800px;
+  margin: 20px auto;
+  background: rgba(244, 241, 48, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* --- Image Slider Styles --- */
+.image-slider {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.4s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-track img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  flex-shrink: 0;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+figcaption {
+  margin-top: 15px;
+  text-align: justify;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
